@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Registration - Ajay</title>
+    <title>Birthday Contro - WeUnity</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -33,7 +33,7 @@
             color: #666;
             font-size: 0.95rem;
         }
-        .pay-btn {
+        .pay-btn, .confirm-btn {
             display: inline-block;
             margin-top: 1.5rem;
             padding: 1rem 2rem;
@@ -43,8 +43,9 @@
             text-decoration: none;
             border-radius: 8px;
             transition: background 0.3s ease;
+            cursor: pointer;
         }
-        .pay-btn:hover {
+        .pay-btn:hover, .confirm-btn:hover {
             background: #45a049;
         }
         .qr-section {
@@ -68,34 +69,56 @@
             font-size: 0.8rem;
             color: #999;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Register for Event</h1>
-        <p>Pay ₹100 to secure your spot</p>
+        <h1>Monthly Birthday Contro</h1>
+        <p>Pay ₹50 to join the monthly contribution.t</p>
 
+        <!-- Direct Payment Button -->
         <a class="pay-btn" href="upi://pay?pa=ajayvavhal44@okaxis&pn=Ajay%20Vavhal&am=100&cu=INR">
-            💳 Pay ₹100
+            💳 Pay ₹50
         </a>
 
+        <!-- QR Code -->
         <div class="qr-section">
             <p>Or scan the QR code:</p>
-            <img src="qr-code.png" alt="UPI QR Code">
+            <img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=upi://pay?pa=ajayvavhal44@okaxis&pn=Birthday%20Contro&am=50&cu=INR" alt="UPI QR Code">
         </div>
 
+        <!-- Instructions -->
         <div class="instructions">
             <strong>Payment Instructions:</strong>
             <ul>
                 <li>Click the button or scan the QR code</li>
-                <li>Complete the payment of ₹100</li>
+                <li>Complete the payment of ₹50</li>
                 <li>Keep the payment screenshot for verification</li>
             </ul>
         </div>
 
+        <!-- Confirm Payment Button -->
+        <button class="confirm-btn" onclick="showForm()">✅ I've Paid</button>
+
+        <!-- Hidden Google Form Link -->
+        <div id="form-link" class="hidden">
+            <p>Thank you! Please fill out this form to complete your registration:</p>
+            <a href="https://forms.gle/fPJsV9N5R9ekDDuQA" target="_blank" class="pay-btn">📋 Fill Out Form</a>
+        </div>
+
+        <!-- Footer -->
         <div class="footer">
             © 2025 Ajay Vavhal | Secure Payment
         </div>
     </div>
+
+    <script>
+        function showForm() {
+            document.getElementById('form-link').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
