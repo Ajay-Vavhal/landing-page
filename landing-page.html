@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - Ajay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        .pay-btn {
+            display: inline-block;
+            margin-top: 1.5rem;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            color: white;
+            background: #4CAF50;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        .pay-btn:hover {
+            background: #45a049;
+        }
+        .qr-section {
+            margin-top: 1.5rem;
+        }
+        .qr-section img {
+            max-width: 200px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 5px;
+            background: white;
+        }
+        .instructions {
+            margin-top: 1.5rem;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #444;
+        }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register for Event</h1>
+        <p>Pay ₹100 to secure your spot</p>
+
+        <a class="pay-btn" href="upi://pay?pa=ajayvavhal44@okaxis&pn=Ajay%20Vavhal&am=100&cu=INR">
+            💳 Pay ₹100
+        </a>
+
+        <div class="qr-section">
+            <p>Or scan the QR code:</p>
+            <img src="qr-code.png" alt="UPI QR Code">
+        </div>
+
+        <div class="instructions">
+            <strong>Payment Instructions:</strong>
+            <ul>
+                <li>Click the button or scan the QR code</li>
+                <li>Complete the payment of ₹100</li>
+                <li>Keep the payment screenshot for verification</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            © 2025 Ajay Vavhal | Secure Payment
+        </div>
+    </div>
+</body>
+</html>
